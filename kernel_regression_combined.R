@@ -1,6 +1,18 @@
+#test_xvar = test data corresponding to normal variates like wind speed, generator speed, ambient temperature
+#test_xcirc = test data corresponding to circular variates like wind direction, turbine blade angles, nacelle position
+#train_xvar = train data corresponding to normal variates
+#train_xcirc = train data corresponding to circular variates
+#train_yvar = Target corresponding to train data
+
 Kernel_prediction_circ=function(test_xvar, test_xcirc, train_xvar, train_xcirc, train_y)
   {
   
+  library(KernSmooth)
+  test_xvar=as.matrix(test_xvar)
+  test_xcirc=as.matrix(test_xcirc)
+  train_xvar=as.matrix(train_xvar)
+  train_xcirc=as.matrix(train_xcirc)
+  train_y=as.numeric(train_y)
   test_pred=rep(0,nrow(test_xvar))
   
   ##Bandwidth calculation

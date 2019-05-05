@@ -1,3 +1,5 @@
+#kernel regression considering both circular and non-circular attributes
+
 #test_xvar = test data corresponding to normal variates like wind speed, generator speed, ambient temperature
 #test_xcirc = test data corresponding to circular variates like wind direction, turbine blade angles, nacelle position
 #train_xvar = train data corresponding to normal variates
